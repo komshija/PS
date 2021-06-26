@@ -298,10 +298,10 @@ int main()
 	sum = 0;
 	omp_set_num_threads(8);
 
-#pragma omp parallel for reduction(+:v)
+#pragma omp parallel for reduction(+:v,sum)
 	for (i = 0; i < N; i++)
 	{
-		sum = sum + f(start + i * step);
+		sum += f(start + i * step);
 		v += step;
 	}
 	printf("sum = %d, v = %d\n", sum, v);
