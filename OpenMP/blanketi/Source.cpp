@@ -204,8 +204,8 @@ int main()
 	omp_set_num_threads(5);
 	id = 2;
 	#pragma omp parallel for reduction(+:id)
-	for (int i = 0; i < N; i++)
-		for (int j = 0; j < N; j++)
+	for (int j = 0; j < N; j++)
+		for (int i = 0; i < N; i++)
 		{
 			a[j] += b[i * N * 2 + j * 2 + 2];
 			id += 2;
@@ -343,9 +343,9 @@ int main()
 	z = s;
 	omp_set_num_threads(5);
 #pragma omp parallel for reduction(+:z)
-	for (i= 0; i < N; i++)
+	for (j = 0; j < N; j++)
 	{
-		for (j = 0; j < N; j++)
+		for (i= 0; i < N; i++)
 		{
 			A[j] += B[i * N * k + j * k + s];
 			z += k;
@@ -369,9 +369,9 @@ int main()
 	m = 0;
 	z = m;
 #pragma omp parallel for reduce(+:z)
-	for (i = 0; i < N; i++)
+	for (j = 0; j < N; j++)
 	{
-		for (j = 0; j < N; j++)
+		for (i = 0; i < N; i++)
 		{
 			X[j] += Y[m + i * N * 2 + j * 2];
 			z += 2;
