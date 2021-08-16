@@ -4,7 +4,7 @@
   * Student: Milan Radosavljević
   * Email: milan.radosavljevic@elfak.rs
   * Elektronski Fakultet 2020/2021.
-  * C++
+  * CUDA/C/C++
 
 Ovaj materijal je isključivo u edukativne svrhe. 
 Moguće da sve nije stopostotno tačno. Ništa ne uzimati zdravo za gotovo.
